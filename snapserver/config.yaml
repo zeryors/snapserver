@@ -17,14 +17,6 @@ options:
   server:
     threads: "-1"
     datadir: "/data/snapserver"
-  spotify:
-    credentials: ""
-    device_name: "HA_Snapcast"
-    cache_dir: "/data/librespot"
-    cache_size_limit: "2G"
-    bitrate: 320
-    volume: 100
-    bypass_apresolve: false
   stream:
     streams: "tcp://0.0.0.0:4953?name=TTS&codec=pcm&mode=server"
     buffer: 1000
@@ -42,14 +34,6 @@ schema:
   server:
     datadir: str
     threads: int?
-  spotify:
-    credentials: str
-    device_name: str
-    cache_dir: str
-    cache_size_limit: str
-    bitrate: list(96|160|320)
-    volume: int(0,100)
-    bypass_apresolve: bool
   stream:
     streams: str?
     bis: str?
