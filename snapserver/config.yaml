@@ -1,6 +1,6 @@
 ---
 name: snapcast-server-sin-libspot
-version: dev-mia 001
+version: dev-mia.001
 slug: snapcast-server-sin-libspot
 description: Host a Snapcast server with librespot , modificado
 url: https://github.com/zeryors/snapserver
