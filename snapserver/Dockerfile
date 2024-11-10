@@ -15,7 +15,7 @@ RUN \
 
 RUN apk add --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community/ snapcast-server=0.29.0-r0
 
-RUN apk add --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing/ librespot=0.6.0-r0
+
 
 RUN \
     wget https://github.com/badaix/snapweb/releases/download/v0.8.0/snapweb.zip && \
