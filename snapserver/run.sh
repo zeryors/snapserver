@@ -98,7 +98,7 @@ if bashio::config.has_value 'logging.enabled'; then
     echo "debug = $(bashio::config 'logging.enabled')" >> "${config}"
 fi
 
-cat <<EOF
+echo "
 [server]
 threads = -1
 datadir = /data/snapserver
@@ -115,8 +115,7 @@ doc_root = /usr/share/snapserver/snapweb/
 [tcp]
 enabled = true
 [logging]
-debug = false
-EOF > /etc/snapserver.conf
+debug = false" > /etc/snapserver.conf
 
 bashio::log.info "Starting SnapServer..."
 exec snapserver
