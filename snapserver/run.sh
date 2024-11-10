@@ -98,5 +98,25 @@ if bashio::config.has_value 'logging.enabled'; then
     echo "debug = $(bashio::config 'logging.enabled')" >> "${config}"
 fi
 
+cat <<EOF
+[server]
+threads = -1
+datadir = /data/snapserver
+[stream]
+stream = tcp://0.0.0.0:4953?name=TTS&codec=pcm&mode=server
+buffer = 1000
+codec = flac
+send_to_muted = true
+sampleformat = 48000:16:2
+[http]
+enabled = true
+bind_to_address = 0.0.0.0
+doc_root = /usr/share/snapserver/snapweb/
+[tcp]
+enabled = true
+[logging]
+debug = false
+EOF > /etc/snapserver.conf
+
 bashio::log.info "Starting SnapServer..."
 exec snapserver
