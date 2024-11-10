@@ -33,7 +33,7 @@ if bashio::config.has_value 'server.datadir'; then
 fi
 
 # Stream Config
-echo "[stream]" >> "${config}"
+#echo "[stream]" >> "${config}"
 
 
 
